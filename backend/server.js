@@ -22,7 +22,6 @@ mongoose.connect(process.env.MONGO_URI, {
 app.get('/', (req, res) => {
   res.send('¡Bienvenido al backend!');
 });
-  
 
 // Rutas
 app.use('/api/certificados', certificadosRoutes);
