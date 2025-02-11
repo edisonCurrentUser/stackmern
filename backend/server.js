@@ -3,6 +3,13 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
+app.use(cors({
+  origin: ['https://stackmern-tcq3.vercel.app/'], // 🔹 Permite solo desde Vercel
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
+
 // Importar modelos
 import certificadosRoutes from './routes/certificados.js';
 import proyectosRoutes from './routes/proyectos.js';
