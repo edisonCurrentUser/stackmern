@@ -21,6 +21,11 @@ mongoose.connect(process.env.MONGO_URI, {
 }).then(() => console.log('MongoDB conectado'))
   .catch(err => console.log(err));
 
+app.get('/', (req, res) => {
+  res.send('¡Bienvenido al backend!');
+});
+  
+
 // Rutas
 app.use('/api/certificados', certificadosRoutes);
 app.use('/api/proyectos', proyectosRoutes);
