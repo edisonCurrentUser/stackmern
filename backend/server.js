@@ -27,5 +27,5 @@ app.use('/api/proyectos', proyectosRoutes);
 app.use('/api/inspecciones', inspeccionesRoutes);
 app.use('/api/contratistas', contratistasRoutes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}`));
